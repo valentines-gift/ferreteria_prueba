@@ -7,10 +7,27 @@ fetch('data/productos.json')
     .then(data => {
         // Almacenar los productos cargados
         window.products = data;
+        
+        // Cargar los productos favoritos desde el localStorage si existen
+        loadFavoritesFromStorage();
     })
     .catch(error => {
         console.error("Error al cargar productos:", error);
     });
+
+// Función para cargar los productos favoritos desde el localStorage
+function loadFavoritesFromStorage() {
+    const storedFavorites = localStorage.getItem('favoriteProducts');
+    if (storedFavorites) {
+        favoriteProducts = JSON.parse(storedFavorites);
+        updateFavoriteModal(); // Actualizar el modal con los productos favoritos cargados
+    }
+}
+
+// Función para guardar los productos favoritos en el localStorage
+function saveFavoritesToStorage() {
+    localStorage.setItem('favoriteProducts', JSON.stringify(favoriteProducts));
+}
 
 // Función para agregar un producto a favoritos
 function addToFavorites(productId) {
@@ -29,6 +46,9 @@ function addToFavorites(productId) {
             // Agregar el producto a la lista de favoritos
             favoriteProducts.push(product);
             
+            // Guardar los favoritos en el localStorage
+            saveFavoritesToStorage();
+            
             // Actualizar el contenido del modal de favoritos
             updateFavoriteModal();
         }
@@ -41,6 +61,9 @@ function addToFavorites(productId) {
 function removeFromFavorites(productId) {
     // Eliminar el producto de la lista de favoritos
     favoriteProducts = favoriteProducts.filter(item => item.id !== productId);
+    
+    // Guardar los favoritos actualizados en el localStorage
+    saveFavoritesToStorage();
     
     // Actualizar el contenido del modal de favoritos
     updateFavoriteModal();
@@ -58,7 +81,7 @@ function updateFavoriteModal() {
             favoriteItem.classList.add('favorite-item');
             
             // Crear el contenido del item favorito
-            favoriteItem.innerHTML = `
+            favoriteItem.innerHTML = ` 
                 <img src="${product.firstImage}" alt="${product.nombre}" class="favorite-img"> <!-- Usar la primera imagen -->
                 <p><strong>${product.nombre}</strong></p>
                 <p>${product.fabricante}</p>
@@ -104,6 +127,3 @@ document.addEventListener('click', function(event) {
         removeFromFavorites(productId);
     }
 });
-
-
-// Aquí puedes agregar cualquier lógica adicional para abrir el modal cuando el usuario haga clic en el icono de favoritos del header
