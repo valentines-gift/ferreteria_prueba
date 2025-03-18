@@ -1,0 +1,300 @@
+[
+    {
+        "id": "H001",
+        "nombre": "Martillo de Uña 16 oz",
+        "fabricante": "Stanley",
+        "clase": "Herramienta Manual",
+        "detalles": "Mango de fibra, cabeza de acero forjado",
+        "precio": "L 150.00",
+        "stock": 50,
+        "imagenes_url": [
+            "https://promart.vteximg.com.br/arquivos/ids/440563-1000-1000/70408.jpg?v=637248118716230000",
+            "https://www.eba.com.ar/12495-large_default/-stanley-51-505-martillo-mango-de-grafito-fatmax.jpg",
+            "https://http2.mlstatic.com/D_NQ_NP_873563-MLU70419176167_072023-O.webp"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "H002",
+        "nombre": "Destornillador Plano 5\"",
+        "fabricante": "Truper",
+        "clase": "Herramienta Manual",
+        "detalles": "Punta imantada, mango ergonómico",
+        "precio": "L 90.00",
+        "stock": 80,
+        "imagenes_url": [
+            "https://seir.com.gt/wp-content/uploads/2024/06/DR-7-32X5DFC2.jpg",
+            "https://tiendapetersen.com.py/cdn/shop/products/TR14006-2_1024x.jpg?v=1738763388",
+            "https://http2.mlstatic.com/D_NQ_NP_880878-MLU75585753146_042024-O.webp"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "H003",
+        "nombre": "Llave Ajustable 10\"",
+        "fabricante": "Urrea",
+        "clase": "Herramienta Manual",
+        "detalles": "Acero cromo vanadio, apertura máxima 30 mm",
+        "precio": "L 320.00",
+        "stock": 30,
+        "imagenes_url": [
+            "https://equiposindustriales.com/web/image/product.template/22806/image_1024?unique=2233119",
+            "https://incom.mx/cdn/shop/files/URREA_710G-LLAVE_AJUSTABLE__PERICO__DE_10IN_CON_RUBBER_GRIP-F1.jpg?v=1709599723",
+            "https://urrea.com/media/catalog/product/5/1/510.jpeg?auto=webp&format=pjpg&fit=cover"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "H004",
+        "nombre": "Serrucho 20\"",
+        "fabricante": "Stanley",
+        "clase": "Herramienta Manual",
+        "detalles": "Dientes templados, mango antideslizante",
+        "precio": "L 280.00",
+        "stock": 25,
+        "imagenes_url": [
+            "https://laferre.hn/wp-content/uploads/2021/04/SERRUCHO-20-LUCTADOR-STANLEY.jpg",
+            "https://promart.vteximg.com.br/arquivos/ids/403621-1000-1000/20495.jpg?v=637177386160400000",
+            "https://tonivisa.com/cdn/shop/products/15-334_1_1000x1000.jpg?v=1647649152"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "E001",
+        "nombre": "Taladro Eléctrico 600W",
+        "fabricante": "Black+Decker",
+        "clase": "Herramienta Eléctrica",
+        "detalles": "Velocidad variable, reversible, broquero de 3/8\"",
+        "precio": "L 1,500.00",
+        "stock": 15,
+        "imagenes_url": [
+            "https://toolmania.hn/wp-content/uploads/2024/12/Taladro-Percutor-Black-and-Decker-1-2-550W-1-14471-scaled.webp",
+            "https://imagedelivery.net/0tt38OLkrSmHRt7hdItWEA/4d7c9f75-6122-4686-095d-d2813ecff300/public",
+            "https://hometool.cl/images/stories/virtuemart/product/1247.jpg"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "E002",
+        "nombre": "Esmeril Angular 4.5\"",
+        "fabricante": "Makita",
+        "clase": "Herramienta Eléctrica",
+        "detalles": "Motor de 840W, velocidad 11,000 rpm",
+        "precio": "L 1,750.00",
+        "stock": 10,
+        "imagenes_url": [
+            "https://cdn.makitatools.com/apps/cms/img/955/95b8b5bb-f9cd-42a0-9331-eb3de17cf43e_9557pb_p_1500px.png",
+            "https://toolsolutions.cr/wp-content/uploads/2022/06/U11536.jpg",
+            "https://i5.walmartimages.com/asr/4f3c9561-28f1-4553-b039-8fe2e692c1b2.0d5905f50d171e7f729532b806cef6d7.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "F001",
+        "nombre": "Tornillo para Madera 1\"",
+        "fabricante": "Fastern",
+        "clase": "Fijación",
+        "detalles": "Acero galvanizado, rosca fina, caja de 100 unidades",
+        "precio": "L 120.00",
+        "stock": 100,
+        "imagenes_url": [
+            "https://m.media-amazon.com/images/I/71cEGG9pgpL.jpg",
+            "https://m.media-amazon.com/images/I/41j-ZnISAQL._AC_UF1000,1000_QL80_.jpg"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "F002",
+        "nombre": "Clavo de Concreto 2\"",
+        "fabricante": "Cobra",
+        "clase": "Fijación",
+        "detalles": "Acero templado, caja de 50 unidades",
+        "precio": "L 90.00",
+        "stock": 75,
+        "imagenes_url": [
+            "https://ferrefama.com/cdn/shop/products/CLAVOCONCRETONEGRO_2cbce06e-6ef3-42e0-9c99-e6362b201f65_medium.jpg?v=1733932100",
+            "https://www.totalmarket.com.mx/wp-content/uploads/2019/06/CLC-2-12G.png",
+            "https://carbonestore.com/cdn/shop/files/16_113041_2_1024x.jpg?v=1717018874"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "P001",
+        "nombre": "Pintura Acrílica Blanca 1 Galón",
+        "fabricante": "Sur",
+        "clase": "Pintura",
+        "detalles": "Interior/exterior, acabado mate, lavable",
+        "precio": "L 450.00",
+        "stock": 40,
+        "imagenes_url": [
+            "https://www.gruposur.com/web/wp-content/uploads/2013/11/latex-3000-276x300.png",
+            "https://www.almacenesbousa.com/web/image/product.template/5551/image",
+            "https://fetesa.com.ni/wp-content/uploads/2023/10/0435785.jpg"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "P002",
+        "nombre": "Thinner 1 Litro",
+        "fabricante": "Solven",
+        "clase": "Pintura",
+        "detalles": "Disolvente universal para pinturas y esmaltes",
+        "precio": "L 85.00",
+        "stock": 60,
+        "imagenes_url": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs_SN7waQDTIeD9FgoBrxXhGs4PSpAIpifJw&s",
+            "https://lamundial.com/web/image/product.template/7488/image_1024?unique=1f0f4af",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ULPhy6tLgF-UDVnlzyFZyrAR9CrJj8huaQ&s"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "E003",
+        "nombre": "Lámpara LED de Emergencia",
+        "fabricante": "Sylvania",
+        "clase": "Eléctrico",
+        "detalles": "30 LEDs, recargable, duración 6 horas",
+        "precio": "L 600.00",
+        "stock": 20,
+        "imagenes_url": [
+            "https://sylvania-colombia.com/wp-content/uploads/2020/06/R1-prod.jpg",
+            "https://disensa.com.ec/wp-content/uploads/2021/08/91026851_LARGE.jpg",
+            "https://equiposindustriales.com/web/image/product.template/32293/image_1024?unique=6594f71"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "P003",
+        "nombre": "Esmalte Sintético Rojo 1 Qt",
+        "fabricante": "Lanco",
+        "clase": "Pintura",
+        "detalles": "Acabado brillante, secado rápido",
+        "precio": "L 180.00",
+        "stock": 35,
+        "imagenes_url": [
+            "https://constructor31.vtexassets.com/arquivos/ids/168001-800-800?v=638182521009900000&width=800&height=800&aspect=true",
+            "https://www.lancopaints.com/america-central/wp-content/uploads/sites/2/2017/08/Total-Aceite-GLN-1.png",
+            "https://constructor31.vtexassets.com/arquivos/ids/168000/Attachment-1-151.png?v=638182521006170000"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "T001",
+        "nombre": "Tubería PVC ½” x 3m",
+        "fabricante": "Tigre",
+        "clase": "Tubería",
+        "detalles": "Uso hidráulico, presión máxima 12 bar",
+        "precio": "L 75.00",
+        "stock": 100,
+        "imagenes_url": [
+            "https://i0.wp.com/pinturasyyesos.com/wp-content/uploads/2021/02/TUBERIA-PRESION-EXTREMO-LISO.jpg?fit=800%2C800&ssl=1",
+            "https://qfzo0q7soc.execute-api.us-east-1.amazonaws.com/master/new/media/catalog/product//1/0/10704012_tubo_pvc_e40_iso_1.jpg",
+            "https://megahierro.com/wp-content/uploads/2020/10/1423085.jpg"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "T002",
+        "nombre": "Codo PVC 90° ½”",
+        "fabricante": "Tigre",
+        "clase": "Tubería",
+        "detalles": "Unión para tubería de presión, color blanco",
+        "precio": "L 10.00",
+        "stock": 250,
+        "imagenes_url": [
+            "https://qfzo0q7soc.execute-api.us-east-1.amazonaws.com/master/new/media/catalog/product//2/0/20101865_joelho_90_rosc_vel_iso_2.jpg",
+            "https://i0.wp.com/pinturasyyesos.com/wp-content/uploads/2018/10/Codo-presi%C3%B3n-90.jpg?fit=600%2C600&ssl=1",
+            "https://www.abrafersrl.com.ar/wp-content/uploads/F1041.jpg"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "C001",
+        "nombre": "Cemento Gris 42.5 Kg",
+        "fabricante": "Argos",
+        "clase": "Construcción",
+        "detalles": "Alta resistencia inicial, ideal para estructuras",
+        "precio": "L 220.00",
+        "stock": 150,
+        "imagenes_url": [
+            "https://media.larachycia.com/800x800/media/items/13010001.webp",
+            "https://www.mipatriala.com/cdn/shop/products/cemento-uso-general-argos_1000x.jpg?v=1613573081",
+            "https://honduras.argos.co/wp-content/uploads/2022/01/Bolsa1-1.webp"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "C002",
+        "nombre": "Arena Fina Metro Cúbico",
+        "fabricante": "Cemex",
+        "clase": "Construcción",
+        "detalles": "Limpia, ideal para mezclas de mortero y concreto",
+        "precio": "L 500.00",
+        "stock": 20,
+        "imagenes_url": [
+            "https://www.construenvio.com/es-us/medias/?context=bWFzdGVyfGltYWdlc3wxMzQ0NnxpbWFnZS93ZWJwfGltYWdlcy9oYTYvaGY4Lzk0NDYyMDU1ODc0ODYud2VicHxjYTBhYzVkNjUzYmZkMjkyNWFlM2ZhNTc1OGE5MDJkNWYyMGYzOGY0NmZiZjE5ZWJmNmQwNjJkZjM0YzQ1MjRk",
+            "https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMjYyOHxpbWFnZS93ZWJwfGltYWdlcy9oYjEvaDU4LzkyNzM3ODc5NzM2NjIud2VicHwzZDU0MGRmYTA3MTE1NDYxMGU4NDM5YzJmOGJjZWNmOWNjMmNhZmJkNzFiN2NjNWJiNmU5NGQ1Y2ViYzBhNmRk"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "A001",
+        "nombre": "Alicate Universal 8\"",
+        "fabricante": "Pretul",
+        "clase": "Herramienta Manual",
+        "detalles": "Acero al carbono, mango antideslizante",
+        "precio": "L 170.00",
+        "stock": 40,
+        "imagenes_url": [
+            "https://media.larachycia.com/800x800/media/items/01022489.webp",
+            "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/130782407_01/w=800,h=800,fit=pad",
+            "https://carpintec.com.pe/cdn/shop/files/Alicate_universal_8_Pretul_-_1_700x700.jpg?v=1709153174"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "E004",
+        "nombre": "Multímetro Digital",
+        "fabricante": "Fluke",
+        "clase": "Herramienta Eléctrica",
+        "detalles": "Lectura hasta 600V, prueba de continuidad",
+        "precio": "L 2,500.00",
+        "stock": 12,
+        "imagenes_url": [
+            "https://dam-assets.fluke.com/s3fs-public/flukeig/products/images/dmm/jpeg/115_300dpi_249x349mm_c_nr-12396-1500x1000.jpg",
+            "https://dam-assets.fluke.com/s3fs-public/Fluke-110-dmm-included.jpg",
+            "https://dam-assets.fluke.com/s3fs-public/flukeig/products/images/dmm/jpeg/113_300dpi_315x394mm_c_nr-12397-1500x1000.jpg"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "F003",
+        "nombre": "Taquete de Nylon 6mm",
+        "fabricante": "Fastern",
+        "clase": "Fijación",
+        "detalles": "Con expansión, caja de 100 unidades",
+        "precio": "L 85.00",
+        "stock": 90,
+        "imagenes_url": [
+            "https://bricomark.mx/wp-content/uploads/2024/02/FISCHER-62756.png",
+            "https://cablesyredes.com/wp-content/uploads/2024/09/FSCH-007.jpg",
+            "https://bedon.mx/wp-content/uploads/2024/02/FISCHER-90868-2.png"
+        ],
+        "disponible": true
+    },
+    {
+        "id": "S001",
+        "nombre": "Escalera de Aluminio 6 peldaños",
+        "fabricante": "Werner",
+        "clase": "Seguridad",
+        "detalles": "Soporta hasta 120 kg, ligera y plegable",
+        "precio": "L 1,800.00",
+        "stock": 8,
+        "imagenes_url": [
+            "https://static.grainger.com/rp/s/is/image/Grainger/3W423_AS01?hei=800&wid=929",
+            "https://i.ebayimg.com/thumbs/images/g/4JcAAOSwQRdm6OMD/s-l1200.jpg",
+            "https://m.media-amazon.com/images/I/4153JfOw3sL._AC_UF894,1000_QL80_.jpg"
+        ],
+        "disponible": true
+    }
+]

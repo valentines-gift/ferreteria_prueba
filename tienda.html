@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería Uno</title>
+
+    <!-- Enlace a Boxicons para los íconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Estilos del header -->
+    <link rel="stylesheet" href="estilos/header.css">
+    <link rel="stylesheet" href="estilos/tienda.css">
+</head>
+
+<body>
+    
+    <!-- Contenedor donde se cargará el header o el menú -->
+    <div id="header-container"></div>
+
+    <!-- Cargar dinámicamente el header -->
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+
+                // Cargar el script de toggle después de cargar el header
+                const script = document.createElement('script');
+                script.src = 'scripts/toggle.js';
+                document.body.appendChild(script);
+
+                // Cargar el script de modals.js después de cargar el header
+                const modalsScript = document.createElement('script');
+                modalsScript.src = 'scripts/modals.js';
+                document.body.appendChild(modalsScript);
+            })
+            .catch(err => console.error('Error cargando el header:', err));
+    </script>
+
+    <div class="search-filter-container">
+        <input type="text" id="search-bar" placeholder="Buscar productos..." onkeyup="searchProducts()">
+        <button id="search-button" onclick="searchProducts()">Buscar</button>
+        <select id="category-filter" onchange="filterCategory()">
+            <option value="">Todas las categorias</option>
+            <option value="Herramienta Manual">Herramienta Manual</option>
+            <option value="Herramienta Eléctrica">Herramienta Eléctrica</option>
+            <option value="Fijación">Fijación</option>
+            <option value="Pintura">Pintura</option>
+            <option value="Eléctrico">Eléctrico</option>
+            <option value="Tubería">Tubería</option>
+            <option value="Construcción">Construcción</option>
+            <option value="Seguridad">Seguridad</option>
+        </select>
+    </div>
+    
+    <section id="product-list">
+        <script src="app.js"></script>
+        <script src="scripts/add.js"></script>
+        <script src="scripts/view.js"></script>
+    </section>
+
+</body>
+
+</html>

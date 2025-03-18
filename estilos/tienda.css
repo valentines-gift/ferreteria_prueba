@@ -1,0 +1,382 @@
+/* ----------------------------------------------Estilos de barra, boton de busqueda y filtros------------------------ */
+.search-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: white;
+    position: fixed;
+    top: 13%;  /* posicionamiento vertical */
+    left: 50%; /* posicionamiento horizontal */
+    transform: translate(-50%, -50%); /* centra el contenedor desde el centro */
+    
+    z-index: 999; /* esta por encima de otros elementos */
+  }
+  
+  /* Search bar */
+  #search-bar {
+    width: 450px;
+    padding: 10px 15px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  #search-bar:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Search button */
+  #search-button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #3a3a3a, #1f1f1f);
+    color: #f1f1f1;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  #search-button:hover {
+    background: linear-gradient(90deg, #1f1f1f, #000000);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Category filter */
+  #category-filter {
+    padding: 10px 25px;
+    padding-right: 20px;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+  
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+  }
+  
+  #category-filter:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #333;
+  }
+  
+  #category-filter option {
+    font-size: 16px;
+  }
+  
+/* ------------- RESPONSIVE: para móviles y pantallas pequeñas ------------ */
+@media (max-width: 768px) {
+    .search-filter-container {
+      flex-direction: column; /* elementos en columna */
+      gap: 10px;
+      width: 90%; /* casi todo el ancho de la pantalla */
+      top: 7%; /* un poco más arriba */
+      left: 50%;
+      transform: translateX(-50%); /* solo centrado horizontal */
+      padding: 15px 10px;
+      background-color: rgba(255, 255, 255, 0.95); /* opcional: fondo sutil para destacar */
+      border-radius: 12px;
+    }
+  
+    #search-bar {
+      width: 100%; /* que ocupe el 100% del contenedor */
+      font-size: 14px;
+      padding: 12px 15px;
+    }
+  
+    #search-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    #category-filter {
+      width: 100%;
+      font-size: 14px;
+      padding: 12px;
+      box-sizing: border-box; /* Asegura que el padding no se sume al ancho */
+    }
+  
+    /* Cambios para el dropdown del select */
+    #category-filter {
+      height: auto; /* Asegura que el dropdown no se expanda innecesariamente */
+    }
+  
+    /* Ajusta el tamaño del listado de opciones cuando se despliega */
+    #category-filter option {
+      font-size: 14px;
+      padding: 10px; /* Similar al padding del select */
+    }
+  }
+
+  
+
+  /* --------------------------------------------diseños de las cards------------------------------------ */
+  #product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alineación de los elementos */
+    margin: 50px 50px;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px; /* Ancho fijo */
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgb(132, 132, 132);
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.1em;
+    color: #333333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.product-card .product-details {
+    font-size: 0.9em;
+    color: #7a7a7a;
+    margin-bottom: 10px;
+}
+
+.product-card .product-price {
+    font-size: 1em;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.product-card .product-id,
+.product-card .product-category {
+    font-size: 0.8em;
+    color: #95a5a6;
+}
+
+.quantity-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantity-btn {
+    background-color: #34495e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+    background-color: #2c3e50;
+}
+
+.quantity-input {
+    width: 45%;
+    padding: 6px;
+    text-align: center;
+    font-size: 0.9em;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.quantity-input:focus {
+    border-color: #34495e;
+    outline: none;
+}
+
+.total-container {
+    margin: 10px 0;
+}
+
+.total-container label {
+    font-size: 1em;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.product-card.selected {
+    background-color: #ecf0f1;
+}
+
+.add-to-cart-btn,
+.buy-now-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover,
+.buy-now-btn:hover {
+    background-color: #21618c;
+}
+
+.icon_card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.icon_card i {
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon_card i:hover {
+    transform: scale(1.2);
+}
+
+.product-card:hover .icon_card {
+    opacity: 1;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    #product-list {
+        justify-content: center;
+        margin: 50px 50px;
+        gap: 10px;
+        margin-top: 160px;
+    }
+
+    .product-card {
+        flex-direction: column; /* Organiza la tarjeta verticalmente en pantallas pequeñas */
+        width: 100%;
+        max-width: 350px;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .product-card img {
+        width: 80%; /* Imagen más pequeña */
+        margin-bottom: 10px;
+    }
+
+    .product-card .info {
+        text-align: center; /* Alineación centrada en pantallas pequeñas */
+    }
+
+    .product-card h3 {
+        font-size: 1em;
+    }
+
+    .product-card .product-price {
+        font-size: 0.9em;
+    }
+
+    .quantity-btn,
+    .add-to-cart-btn,
+    .buy-now-btn {
+        padding: 12px; /* Aumentar el tamaño del padding para hacer los botones más grandes */
+        font-size: 1.1em; /* Aumentar el tamaño de la fuente */
+    }
+
+    .quantity-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .quantity-input {
+        width: 30%;
+        font-size: 0.85em;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 0.9em;
+    }
+
+    .product-card .product-price {
+        font-size: 0.85em;
+    }
+
+    .quantity-btn,
+    .add-to-cart-btn,
+    .buy-now-btn {
+        padding: 10px; /* Aumentar el tamaño del padding para botones más grandes */
+        font-size: 1em; /* Aumentar el tamaño de la fuente */
+    }
+
+    .quantity-container {
+        gap: 5px;
+    }
+
+    .quantity-input {
+        width: 50%;
+        padding: 7px;
+    }
+}
+
+
+/*  */

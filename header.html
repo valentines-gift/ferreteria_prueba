@@ -1,0 +1,90 @@
+<!-- HEADER FIJO Y RESPONSIVE -->
+<header class="header">
+    <!-- Logo -->
+    <div class="logo">
+        <h1>Ferretería Uno</h1>
+        <h4>Tienda Online</h4>
+    </div>
+
+    <!-- Botón menú responsive -->
+    <div class="menu-toggle">
+        <i class='bx bx-menu'></i>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda Online</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Íconos del carrito y favoritos -->
+    <div class="icons">
+        <i class='bx bx-cart' id="cart-icon"><span class="contador">0</span></i>
+        <i class='bx bx-like' id="like-icon"><span class="contador">0</span></i>
+    </div>
+
+    <!-- CONTENEDOR GENERAL DE MODALES -->
+    <div id="global_modal">
+
+        <!-- MODAL CARRITO -->
+        <div id="cart-modal" class="modal">
+            <div class="modal-content cart">
+                <span class="close" id="cart-close">&times;</span>
+                <h2>Carrito de Compras</h2>
+
+                <!-- Productos en el carrito -->
+                <div id="cart-items" class="cart-items">
+                    <!-- Si el carrito está vacío -->
+                    <div class="empty-cart">
+                        <img src="https://cdn.pixabay.com/photo/2015/10/22/16/42/icon-1001596_1280.png" alt="Carrito vacío">
+                        <p>Carrito vacío</p>
+                        <a href="tienda.html">
+                            <button class="btn go-shop-btn">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                                    <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
+                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                                  </svg>
+                                <span>Ir a comprar</span>
+                              </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Totales y acciones -->
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <label>Total general:</label>
+                        <span id="total-general">L 0.00</span>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="btn checkout" id="checkout-btn">Realizar compra</button>
+                        <button class="btn clear-cart" id="clear-cart-btn">Vaciar carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- MODAL FAVORITOS -->
+        <div id="like-modal" class="modal" >
+            <div class="modal-content-like">
+                <span class="close" id="like-close">&times;</span>
+                <h2 style="color: #333333; text-align: center;">Productos Favoritos</h2>
+
+                <!-- Productos favoritos -->
+                <div id="favorite-items" class="favorite-items">
+                    <!-- Si no hay favoritos -->
+                    <div class="empty-favorites">
+                        <img src="https://cdn.pixabay.com/photo/2021/11/10/07/08/like-6783117_1280.png" alt="Sin favoritos">
+                        <p>No ha añadido nada a favoritos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

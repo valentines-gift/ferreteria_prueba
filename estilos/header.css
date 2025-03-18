@@ -1,0 +1,605 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 80px; /* Evitar que el contenido quede detrás del header */
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 30px;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 24px;
+    z-index: 10000; /* Aseguramos que el logo se quede arriba del menú */
+    position: relative; /* Asegura que el z-index funcione */
+}
+
+.logo h4 {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    z-index: 1201; /* Aseguramos que el h4 también quede sobre el menú */
+}
+
+/* Nav principal (versión desktop) */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 0;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover en los enlaces (solo cuando no está activo) */
+.nav a:hover {
+    color: #ff6347;
+    background-color: rgba(255, 99, 71, 0.2); /* Fondo sutil al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados para el efecto */
+}
+
+/* Resaltar el enlace activo */
+.nav a.active {
+    position: relative;
+    color: #ff6347; /* Cambio de color para el enlace activo */
+    background-color: rgba(255, 99, 71, 0.2); /* Fondo sutil activo */
+}
+
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: #ff6347; /* Línea de color para el enlace activo */
+    border-radius: 2px;
+}
+
+/* Iconos */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons i {
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.3s;
+}
+
+.icons i:hover {
+    color: #7c7c7b;
+    transform: scale(1.1);
+}
+
+/* Botón hamburguesa por defecto oculto */
+.menu-toggle {
+    display: none !important;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    /* Mostrar botón hamburguesa y aumentar tamaño */
+    .menu-toggle {
+        display: block !important;
+        z-index: 1201;
+        font-size: 30px; /* Aumenta el tamaño del icono del menú */
+    }
+
+    /* Logo y texto de logo por encima del menú */
+    .logo h1, .logo h4 {
+        z-index: 1201;
+        position: relative; /* Asegura que el z-index funcione */
+    }
+
+    /* Menú lateral */
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100%;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .nav ul li {
+        width: 100%;
+    }
+
+    .nav ul li a {
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Íconos más compactos */
+    .icons {
+        gap: 5px;
+    }
+}
+
+/* styles for modals */
+#global_modal {
+    display: none; /* Lo ocultamos por defecto */
+    position: fixed;
+    z-index: 1100; /* Un poco por debajo de los modales, si fuera necesario */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo básico para cada modal (contenedor de contenido) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal-content,
+.modal-content-like {
+    background-color: #ffffff;
+    margin: 5% auto;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.4s ease;
+}
+
+/* Animación de deslizamiento */
+@keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+/* BOTÓN CERRAR */
+.close {
+    color: #ff3b3b;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ce3535;
+}
+
+/* TÍTULOS */
+
+.modal-content h2,
+.modal-content-like h2 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Contenido vacío */
+.empty-cart,
+.empty-favorites {
+    text-align: center;
+    color: #3d1e1e;
+}
+
+.empty-cart p{
+    color: #333;
+}
+
+.empty-cart img,
+.empty-favorites img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+
+
+/* estilo de los contenedores de producto */
+/* .cart-items, 
+.favorite-items {
+
+} */
+
+
+/* PIE DE CARRITO */
+/* =================== */
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #6e6e6e;
+    padding-top: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* TOTAL DEL CARRITO */
+.cart-total label {
+    font-weight: 600;
+    color: #333;
+    margin-right: 10px;
+}
+
+.cart-total span {
+    font-size: 18px;
+    color: #1d2125;
+}
+/* =================== */
+
+
+/* BOTONES */
+/* =================== */
+.cart-actions,
+.modal-content-like .btn-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #11d307;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #13a10b;
+    transform: translateY(-1px);
+}
+
+.btn.clear-cart {
+    background-color: #e71a2f;
+}
+
+.btn.clear-cart:hover {
+    background-color: #a71d2a;
+}
+
+/* BOTÓN IR A COMPRAR EN CARRITO VACÍO */
+.go-shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  color: #fff;
+  margin: 15px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.go-shop-btn:hover {
+  background-color: #f0f0f0; /* Verde al pasar el mouse */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  color: #000000;
+}
+
+.go-shop-btn svg path {
+  transition: 400ms;
+}
+
+.go-shop-btn:hover {
+  background-color: transparent;
+}
+
+.go-shop-btn:hover .text {
+  color: #181717;
+}
+
+.go-shop-btn:hover svg path {
+  fill: #181717;
+}
+
+
+/* ------------------------------------------Favoritos productos añadidos----------------------------------- */
+
+
+
+/* Estilos generales del modal de favoritos */
+#favorite-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #0d0b0b;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-item .favorite-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.favorite-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.favorite-item strong {
+    color: #555;
+}
+
+.favorite-item .remove-from-favorites-btn {
+    margin-left: auto;
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.favorite-item .remove-from-favorites-btn:hover {
+    background-color: #e53935;
+}
+
+.empty-favorites {
+    text-align: center;
+    color: #777;
+}
+
+.empty-favorites img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.empty-favorites p {
+    font-size: 14px;
+}
+
+/* ESTILO DE MODALS PARA PANTALLAS DE CELULAR Y TABLETS */
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+
+    /* Modal de favoritos */
+    .modal-content, .modal-content-like {
+        max-width: 90%; /* Ajustar el tamaño */
+        margin: 10% auto;
+        padding: 15px; /* Reducir el espacio interior */
+    }
+
+    /* Imagen de productos en los modales */
+    .favorite-item .favorite-img {
+        width: 40px; /* Reducir tamaño de imagen */
+        height: 40px;
+    }
+
+    /* Títulos dentro del modal */
+    .modal-content h2,
+    .modal-content-like h2 {
+        font-size: 20px; /* Ajustar tamaño del texto */
+        margin-bottom: 15px;
+    }
+
+    /* Ajustar los botones */
+    .btn {
+        font-size: 14px; /* Reducir tamaño de fuente */
+        padding: 8px 14px; /* Ajustar tamaño de los botones */
+    }
+
+    /* Ajustar el botón de eliminar favoritos */
+    .favorite-item .remove-from-favorites-btn {
+        padding: 4px 8px; /* Reducir tamaño */
+        font-size: 10px;
+    }
+
+    /* Modificar el fondo para modales */
+    .modal {
+        background-color: rgba(0, 0, 0, 0.7); /* Hacer el fondo un poco más oscuro */
+    }
+
+    /* Ajustar la apariencia del pie de carrito */
+    .cart-footer {
+        padding-top: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-total label {
+        font-size: 16px;
+    }
+
+    .cart-total span {
+        font-size: 16px;
+    }
+
+    /* Ajustes para las imágenes en modales vacíos */
+    .empty-cart img, .empty-favorites img {
+        width: 120px;
+        margin-bottom: 8px;
+    }
+
+    /* Ajustar el layout de los botones en el carrito vacío */
+    .go-shop-btn {
+        font-size: 14px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Ajustes en las acciones de carrito */
+    .cart-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Estilo para el contenedor de productos favoritos */
+    #favorite-items {
+        max-height: 300px; /* Reducir altura máxima */
+        padding: 8px;
+    }
+
+    /* Estilo para las cards de productos en favoritos */
+    .favorite-item {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    /* Mejorar la visualización de los modales */
+    .modal-content,
+    .modal-content-like {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .empty-cart p, .empty-favorites p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Modificar la visualización en pantallas más pequeñas */
+    .modal-content, .modal-content-like {
+        max-width: 95%; /* Reducir aún más el tamaño */
+        padding: 12px;
+    }
+
+    /* Reducir tamaño de las imágenes */
+    .favorite-item .favorite-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Ajustar márgenes en el pie del carrito */
+    .cart-footer {
+        flex-direction: column;
+        padding-top: 8px;
+    }
+
+    /* Ajustar el tamaño de los botones en dispositivos muy pequeños */
+    .btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .go-shop-btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .empty-cart img, .empty-favorites img {
+        width: 100px;
+    }
+
+    /* Ajustar el espacio de las acciones de carrito */
+    .cart-actions {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    /* Reducir el tamaño de los productos dentro de los modales */
+    .favorite-item {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+
+/* ----------------------------contador-------------------------------- */
+.contador {
+    display: inline-block;
+    background-color: #35bf2b; /* color de fondo */
+    color: #fff;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* La clase que activa la animación */
+.contador-pop {
+    transform: scale(1.5);
+    background-color: #68ff03; /* cambia de color mientras anima */
+}
+
